@@ -13,6 +13,18 @@ class Player:
     def roll_dice(self):
         for die in self._die:
             die.roll()
+
+        if self.has_pair():
+            self._points += 1
+            print("You got a pair!")
+
+        if self.has_series():
+            print("You got a series of 3!")
+            self._points += 2
+        if self.has_three_of_a_kind():
+            self._points += 3
+            print("You got 3 of a kind!")        
+        
             
         # Call sort on the list
         self._die.sort(key=lambda x: x._value)

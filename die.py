@@ -1,10 +1,11 @@
 import random
 
 class Die:
-    _sides = 0
-    _value = 0
+   # _sides = 0
+   # _value = 0
     def __init__(self,sides = 6):
         self._sides = 6
+        self._value = 0
     
     def roll(self):
         '''Generate a random number between 1 and the sides of the dice (usually 6)'''
